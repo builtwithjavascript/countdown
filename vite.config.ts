@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 //import { fileURLToPath, URL } from 'url'
 import path from 'path'
 
-const projectName = 'permissions'
+const projectName = 'countdown'
 
 // https://vitejs.dev/config/
 export default defineConfig({
