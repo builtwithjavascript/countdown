@@ -1,2 +1,2 @@
-# countdown
+# @builtwithjavascript/countdown
 Accurate countdown
