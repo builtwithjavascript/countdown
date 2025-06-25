@@ -1,3 +1,4 @@
+// file: src/countdown/types.ts
 export type TFormattedTime = {
   days: number
   hours: number

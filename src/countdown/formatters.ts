@@ -1,3 +1,4 @@
+// file: src/countdown/formatters.ts
 import { TTimeRemaining, TFormattedTime } from './types'
 
 // Helper function to format the TimeRemaining object into a display string
