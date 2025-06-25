@@ -48,6 +48,7 @@ countdown.start(targetDate)
 // countdown.stop()
 // targetDate = new Date('2026-07-23T08:15:00')
 // countdown.start(targetDate)
+```
 
 ## Project Structure and Code Description
 
