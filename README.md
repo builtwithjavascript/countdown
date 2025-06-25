@@ -15,7 +15,6 @@ import {
   formatCurrentTime,
   type TCountdownCallback,
 } from '@builtwithjavascript/countdown'
-// import DatetimeLocalPicker from './datetime-local-picker.vue'; // This line seems to be from an example app, not the package itself.
 
 // 1. Define your callback function that will receive the updated time
 const countdownCallback: TCountdownCallback = (results) => {
