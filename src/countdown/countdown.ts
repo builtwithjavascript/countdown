@@ -43,7 +43,7 @@ export class Countdown {
     // Prepare the current time object
     const current: TCurrentTime = {
       year: now.getFullYear(),
-      month: now.getMonth(),
+      month: now.getMonth() + 1,
       day: now.getDate(),
       hours: now.getHours(),
       minutes: now.getMinutes(),
