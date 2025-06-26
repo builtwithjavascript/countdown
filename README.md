@@ -67,8 +67,8 @@ The package is structured to provide clear separation of concerns, making it eas
 
 
 * **`src/countdown/types.ts`**: This file defines all the TypeScript types used throughout the package.
-    * `TFormattedTime`: Represents a standard time structure with `days`, `hours`, `minutes`, and `seconds`.
-    * `TTimeRemaining`: Extends `TFormattedTime` by adding `totalMilliseconds` and `isFinished`, specifically for the countdown's remaining time.
+    * `TCurrentTime`: Represents a standard time structure with `year`, `month`, `day`, `hours`, `minutes`, and `seconds`.
+    * `TTimeRemaining`: Represent the reamining time structure with `day`, `hours`, `minutes`, `seconds`, `totalMilliseconds` and `isFinished`, specifically for the countdown's remaining time.
     * `TRemainingTimeResult`: The primary return type for the countdown callback, containing both `timeRemaining` and `currentTime` objects.
     * `TCountdownCallback`: Defines the signature for the callback function that consumers will provide to receive countdown updates.
 
@@ -81,7 +81,7 @@ The package is structured to provide clear separation of concerns, making it eas
 
 * **`src/countdown/formatters.ts`**: This file contains utility functions for formatting the time objects into human-readable strings.
     * `formatTimeRemaining(time: TTimeRemaining): string`: Takes a `TTimeRemaining` object and formats it into a `DD:HH:MM:SS` string. It handles carry-overs for seconds, minutes, and hours to ensure correct display.
-    * `formatCurrentTime(time: TFormattedTime): string`: Takes a `TFormattedTime` object and formats it into an `HH:MM:SS` string, suitable for displaying the current time.
+    * `formatCurrentTime(time: TCurrentTime): string`: Takes a `TCurrentTime` object and formats it into an `yyyy-mm-dd hh:mm:ss` string, suitable for displaying the current time.
 
 * **`src/countdown/index.ts`**: This file serves as the main entry point for the `countdown` module, re-exporting all necessary types, classes, and functions from `types.ts`, `countdown.ts`, and `formatters.ts`.
 

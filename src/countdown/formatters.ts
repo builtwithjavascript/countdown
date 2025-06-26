@@ -1,5 +1,5 @@
 // file: src/countdown/formatters.ts
-import { TTimeRemaining, TFormattedTime } from './types'
+import { TTimeRemaining, TCurrentTime } from './types'
 
 // Helper function to format the TimeRemaining object into a display string
 // This now specifically formats the countdown part
@@ -32,7 +32,9 @@ export function formatTimeRemaining(time: TTimeRemaining): string {
 }
 
 // New helper function to format the current time part
-export function formatCurrentTime(time: TFormattedTime): string {
+export function formatCurrentTime(time: TCurrentTime): string {
   const formatUnit = (unit: number) => unit.toString().padStart(2, '0')
-  return `${formatUnit(time.hours)}:${formatUnit(time.minutes)}:${formatUnit(time.seconds)}`
+  let datePart = `${formatUnit(time.year)}:${formatUnit(time.month)}:${formatUnit(time.day)}`
+  let timePart = `${formatUnit(time.hours)}:${formatUnit(time.minutes)}:${formatUnit(time.seconds)}`
+  return `${datePart} ${timePart}`
 }

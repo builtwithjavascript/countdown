@@ -1,5 +1,5 @@
 // file: src/countdown/countdown.ts
-import { TTimeRemaining, TRemainingTimeResult, TFormattedTime, TCountdownCallback } from './types'
+import { TTimeRemaining, TCurrentTime, TRemainingTimeResult, TCountdownCallback } from './types'
 
 export class Countdown {
   private intervalId: number | undefined
@@ -41,8 +41,10 @@ export class Countdown {
     }
 
     // Prepare the current time object
-    const current: TFormattedTime = {
-      days: 0, // Days are not typically relevant for current time display in HH:MM:SS
+    const current: TCurrentTime = {
+      year: now.getFullYear(),
+      month: now.getMonth(),
+      day: now.getDate(),
       hours: now.getHours(),
       minutes: now.getMinutes(),
       seconds: now.getSeconds()
