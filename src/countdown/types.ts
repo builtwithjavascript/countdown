@@ -6,6 +6,7 @@ export type TCurrentTime = {
   hours: number
   minutes: number
   seconds: number
+  weekDay: number
 }
 
 // This type represents the structured time components for display

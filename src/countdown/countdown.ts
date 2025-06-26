@@ -47,7 +47,8 @@ export class Countdown {
       day: now.getDate(),
       hours: now.getHours(),
       minutes: now.getMinutes(),
-      seconds: now.getSeconds()
+      seconds: now.getSeconds(),
+      weekDay: now.getDay()
     }
 
     return {
